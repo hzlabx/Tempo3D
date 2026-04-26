@@ -1,0 +1,217 @@
+html { font-size: 17.5px; }
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background: #ffffff;
+  color: #2a2a2a;
+  line-height: 1.7;
+}
+
+/* Match CG-Floor (Bootstrap 4 default container ≈ 1140px) */
+.container.is-max-widescreen {
+  max-width: 1140px !important;
+}
+
+/* ========== HEADER ========== */
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 600 !important;
+  color: #1a1a1a;
+  margin: 0 auto 1.5rem !important;
+  line-height: 1.25;
+  font-size: 2.2rem !important;
+  max-width: 980px;
+}
+@media (min-width: 1216px) {
+  .publication-title { font-size: 2.4rem !important; }
+}
+
+.title.is-3, .title.is-4, .title.is-5 {
+  font-family: 'Google Sans', sans-serif;
+  color: #1a1a1a;
+}
+
+.publication-authors {
+  margin: 0.5rem 0;
+}
+.publication-authors a {
+  color: #3273dc;
+}
+.publication-authors a:hover {
+  color: #5e35b1;
+  text-decoration: underline;
+}
+
+.conference-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #5e35b1, #3949ab);
+  color: #fff;
+  padding: 0.45rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 1.2rem 0 0.4rem;
+  font-size: 1rem;
+}
+
+.publication-links {
+  margin-top: 1.6rem;
+}
+.publication-links .button {
+  margin: 0.25rem;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.publication-links .button:hover {
+  background: #5e35b1;
+  transform: translateY(-2px);
+}
+.publication-links .button.is-coming-soon {
+  background: #9b9b9b;
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+.publication-links .button.is-coming-soon:hover {
+  background: #9b9b9b;
+  transform: none;
+}
+
+/* ========== TEASER ========== */
+.hero.teaser {
+  padding: 0 1.5rem 1rem;
+}
+.teaser-img {
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+}
+.teaser-caption {
+  margin-top: 1.2rem;
+  color: #444;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========== SECTIONS ========== */
+.section {
+  padding: 3rem 1.5rem;
+}
+
+.abstract-text {
+  text-align: justify;
+  color: #2a2a2a;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.abstract-text p { margin: 0; }
+
+/* ========== VIDEO ========== */
+.video-section {
+  background: #f7f7fa;
+}
+.video-frame {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.14);
+  aspect-ratio: 16 / 9;
+}
+.video-frame video,
+.video-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ========== METHOD ========== */
+figure.image {
+  margin: 1.2rem 0 0.6rem;
+}
+figure.image img {
+  border-radius: 6px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  background: #eef0f4;
+  min-height: 80px;
+  width: 100%;
+}
+.caption {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 1100px;
+  margin: 1rem auto 0;
+}
+
+/* ========== TECHNICAL PAPER ========== */
+.paper-section { background: #ffffff; }
+.paper-thumb-link {
+  display: inline-block;
+  margin: 1rem auto;
+  border: none;
+}
+.paper-thumb {
+  width: 100%;
+  max-width: 1040px;
+  height: auto;
+  border: none;
+  background: transparent;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.10));
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+.paper-thumb:hover {
+  transform: translateY(-3px);
+  filter: drop-shadow(0 12px 28px rgba(0,0,0,0.18));
+}
+.paper-thumb-hint {
+  margin-top: 1rem;
+  color: #777;
+  font-size: 0.95rem;
+}
+
+/* ========== CITATION ========== */
+.citation-section { background: #ffffff; }
+#BibTeX pre {
+  background: #f5f3fa;
+  color: #2a2a2a;
+  padding: 1.6rem 2rem;
+  border-radius: 10px;
+  border-left: 4px solid #5e35b1;
+  font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  max-width: 1000px;
+  margin: 1rem auto 0;
+  box-shadow: 0 2px 16px rgba(94, 53, 177, 0.06);
+}
+#BibTeX pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+}
+
+/* ========== CONTACT ========== */
+.contact-section { background: #f7f7fa; }
+
+/* ========== ACKNOWLEDGMENTS ========== */
+.ack-text {
+  color: #444;
+  font-size: 1.05rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.75;
+}

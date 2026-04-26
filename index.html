@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Tempo3D: Efficient Temporal-Aware Fine-Tuning and Multi-View Latent Aggregation for 3D Generation. ACM TOG (SIGGRAPH 2026).">
+  <title>Tempo3D | ACM TOG (SIGGRAPH 2026)</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+<!-- ============== HEADER ============== -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-widescreen has-text-centered">
+      <h1 class="title is-2 publication-title">
+        Tempo3D: Efficient Temporal-Aware Fine-Tuning
+        and Multi-View Latent Aggregation for 3D Generation
+      </h1>
+
+      <div class="is-size-5 publication-authors">
+        <a href="mailto:zhuhuizhi@whu.edu.cn">Huizhi Zhu</a><sup>1</sup> &nbsp;·&nbsp;
+        <a href="mailto:jiongming@whu.edu.cn">Jiongming Qin</a><sup>1</sup> &nbsp;·&nbsp;
+        <a href="mailto:wangyusen@whu.edu.cn">Yusen Wang</a><sup>2</sup> &nbsp;·&nbsp;
+        <a href="mailto:cxxiao@whu.edu.cn">Chunxia Xiao</a><sup>1,*</sup>
+      </div>
+
+      <div class="is-size-6 publication-authors">
+        <sup>1</sup>Wuhan University &nbsp;&nbsp;
+        <sup>2</sup>Dongfeng Motor Corp. R&amp;D Institute
+      </div>
+
+      <p class="conference-badge">ACM TOG (SIGGRAPH 2026)</p>
+
+      <div class="publication-links">
+        <a href="static/Tempo3D.pdf" class="button is-rounded is-dark">
+          <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+        </a>
+        <a href="static/SM.pdf" class="button is-rounded is-dark">
+          <span class="icon"><i class="fas fa-file-alt"></i></span><span>Supplementary</span>
+        </a>
+        <a class="button is-rounded is-dark is-coming-soon" title="Coming soon" onclick="return false;">
+          <span class="icon"><i class="fab fa-github"></i></span><span>Code (Coming Soon)</span>
+        </a>
+        <a class="button is-rounded is-dark is-coming-soon" title="Coming soon" onclick="return false;">
+          <span class="icon"><i class="fas fa-database"></i></span><span>Dataset (Coming Soon)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TEASER ============== -->
+<section class="hero teaser">
+  <div class="container is-max-widescreen">
+    <figure class="image">
+      <img src="static/images/tea.png" alt="Tempo3D teaser" class="teaser-img"/>
+    </figure>
+    <p class="teaser-caption has-text-centered">
+      <strong>Tempo3D</strong> generates accurate, detailed, and stable 3D assets from a single image,
+      and supports versatile downstream editing via text prompts.
+    </p>
+  </div>
+</section>
+
+<!-- ============== ABSTRACT ============== -->
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Abstract</h2>
+        <div class="abstract-text">
+          <p>
+            We propose <strong>Tempo3D</strong>, a resource-efficient paradigm for high-fidelity
+            VecSet-based 3D generation. Two key components: (1) the <strong>Time-Segmented LoRA</strong>
+            (TS-LoRA) module exploits the inherent <em>structure-to-details</em> temporal transition of
+            flow-based models to decouple feature learning, significantly bolstering high-frequency detail
+            generation without large-scale retraining; (2) a <strong>multi-view latent aggregation</strong>
+            strategy combining <em>Soft Flow Trajectory Projection</em> (Soft FTP) and
+            <em>Score-based Velocity Field Aggregation</em> (SVFA) resolves cross-view velocity conflicts to
+            ensure structural accuracy. Together with the manually curated <strong>TempoDetail</strong>
+            dataset (2K assets), Tempo3D outperforms state-of-the-art baselines in
+            generation quality, geometric precision, and editability — and supports natural-language 3D editing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== METHOD ============== -->
+<section class="section">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Method</h2>
+    <figure class="image">
+      <img src="static/images/o1.jpg" alt="Tempo3D overview"/>
+    </figure>
+    <p class="caption has-text-centered">
+      The overview of our framework.
+    </p>
+  </div>
+</section>
+
+<!-- ============== VIDEO ============== -->
+<section class="section video-section">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Demo</h2>
+    <div class="video-frame">
+      <iframe
+        src="https://www.youtube.com/embed/PZp0OMjWhdg"
+        title="Tempo3D demo video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TECHNICAL PAPER ============== -->
+<section class="section paper-section">
+  <div class="container is-max-widescreen has-text-centered">
+    <h2 class="title is-3">Technical Paper</h2>
+    <a href="static/Tempo3D.pdf" class="paper-thumb-link" target="_blank" rel="noopener">
+      <img src="static/images/paper_thumbnail.png" alt="Paper thumbnail" class="paper-thumb"/>
+    </a>
+  </div>
+</section>
+
+<!-- ============== CITATION ============== -->
+<section class="section citation-section" id="BibTeX">
+  <div class="container is-max-widescreen content">
+    <h2 class="title is-3 has-text-centered">Citation</h2>
+<pre><code>@article{zhu2026tempo3d,
+  author  = {Zhu, Huizhi and Qin, Jiongming and Wang, Yusen and Xiao, Chunxia},
+  title   = {Tempo3D: Efficient Temporal-Aware Fine-Tuning and Multi-View
+             Latent Aggregation for 3D Generation},
+  journal = {ACM Transactions on Graphics (Proc. SIGGRAPH)},
+  year    = {2026}
+}</code></pre>
+  </div>
+</section>
+
+<!-- ============== CONTACT ============== -->
+<section class="section contact-section">
+  <div class="container is-max-widescreen content">
+    <h2 class="title is-3 has-text-centered">Contact</h2>
+    <p class="ack-text has-text-centered">
+      For technical questions, please contact
+      <a href="mailto:zhuhuizhi@whu.edu.cn">zhuhuizhi@whu.edu.cn</a>.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
