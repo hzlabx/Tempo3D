@@ -15,4 +15,4 @@ __pycache__/
 
 # Large media — hosted externally (YouTube, GitHub Release)
 static/videos/
-static/*.pdf
+static/SM.pdf
